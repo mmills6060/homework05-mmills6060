@@ -26,5 +26,5 @@ Bubble Sort in C. (n.d.). OpenGenus IQ. Retrieved from https://iq.opengenus.org/
 
 (Optional) What was your favorite part of the assignment? 
 
-(Optional) How would you improve the assignment? 
+(Optional) How would you improve the assignment?  
 
