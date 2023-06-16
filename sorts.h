@@ -39,13 +39,22 @@ int findMinimum(int *array, int start, int stop)
 // Output: No value is returned, but 'array' should be modified to store a sorted array of numbers.
 void selectionSortIntegers(int *array, unsigned int size, int print)
 {
-    unsigned int i;
-    for (i = 0; i < size - 1; i++)
-    {
-        int minIndex = findMinimum(array, i, size - 1);
-        swap(&array[i], &array[minIndex]);
-        if (print)
-        {
+    for (unsigned int i = 0; i < size - 1; i++) {
+        unsigned int minIndex = i;
+
+        for (unsigned int j = i + 1; j < size; j++) {
+            if (array[j] < array[minIndex]) {
+                minIndex = j;
+            }
+        }
+
+        if (minIndex != i) {
+            int temp = array[i];
+            array[i] = array[minIndex];
+            array[minIndex] = temp;
+        }
+
+        if (print) {
             printf("Iteration %d: ", i + 1);
             printIntArray(array, size);
         }
