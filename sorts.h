@@ -53,12 +53,11 @@ void selectionSortIntegers(int *array, unsigned int size, int print)
         array[i] = array[min_index];
         array[min_index] = temp;
 
-        if (print) {
-            printf("Iteration %u: ", i + 1);
-            for (unsigned int k = 0; k < size; k++) {
-                printf("%d ", array[k]);
-            }
-            printf("\n");
+    if (print) {
+      for (unsigned int k = 0; k < size; k++) {
+        printf("%d ", array[k]);
+      }
+      printf("\n");
         }
     }
 }
