@@ -27,4 +27,4 @@ Bubble Sort in C. (n.d.). OpenGenus IQ. Retrieved from https://iq.opengenus.org/
 (Optional) What was your favorite part of the assignment? 
 
 (Optional) How would you improve the assignment?  
-
+I spend 30 minutes writing the code and the next 5 hours trying to format the text in a way that can be recognized as correct in gradescope. 
