@@ -39,32 +39,28 @@ int findMinimum(int *array, int start, int stop)
 // Output: No value is returned, but 'array' should be modified to store a sorted array of numbers.
 void selectionSortIntegers(int *array, unsigned int size, int print)
 {
-  // Loop over each element in the array, starting from the second element.
-  for (unsigned int i = 1; i < size; i++) {
+    for (unsigned int i = 0; i < size - 1; i++) {
+        unsigned int min_index = i;
 
-    // Find the minimum element in the array after the current element.
-    int min_element = i;
-    for (unsigned int j = i + 1; j < size; j++) {
-      if (array[j] < array[min_element]) {
-        min_element = j;
-      }
-    }
+        for (unsigned int j = i + 1; j < size; j++) {
+            if (array[j] < array[min_index]) {
+                min_index = j;
+            }
+        }
 
-    // Swap the current element with the minimum element if they are not in the correct order.
-    if (array[i] > array[min_element]) {
-      int temp = array[i];
-      array[i] = array[min_element];
-      array[min_element] = temp;
-    }
-  }
+        // Swap the current element with the minimum element
+        int temp = array[i];
+        array[i] = array[min_index];
+        array[min_index] = temp;
 
-  // If the 'print' flag is set, print out the array after each iteration.
-  if (print) {
-    for (unsigned int k = 0; k < size; k++) {
-      printf("%d ", array[k]);
+        if (print) {
+            printf("Iteration %d: ", i + 1);
+            for (unsigned int k = 0; k < size; k++) {
+                printf("%d ", array[k]);
+            }
+            printf("\n");
+        }
     }
-    printf("\n");
-  }
 }
 /***  Code for Insertion Sort ***/
   
