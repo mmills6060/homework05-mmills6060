@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
     selectionSortIntegers(dataset5, size, print);
     printf("\n");
     selectionSortIntegers(dataset6, size, print);
-
+    printf("\n");
     // Print out an array
    
 

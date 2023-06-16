@@ -56,17 +56,9 @@ void selectionSortIntegers(int *array, unsigned int size, int print)
     int temp = array[i];
     array[i] = array[min_element];
     array[min_element] = temp;
-
-    // If the 'print' flag is set, print out the array after each iteration.
-    if (print) {
-      for (unsigned int k = 0; k < size; k++) {
-        printf("%d ", array[k]);
-      }
-      printf("\n");
-    }
   }
-}
 
+}
 /***  Code for Insertion Sort ***/
 
 // =============== Sort Function ===============
