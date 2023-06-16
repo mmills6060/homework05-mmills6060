@@ -40,22 +40,22 @@ int findMinimum(int *array, int start, int stop)
 void selectionSortIntegers(int *array, unsigned int size, int print)
 {
   // Loop over each element in the array, starting from the second element.
-  for (unsigned int i = 0; i < size - 1; i++) {
+  for (unsigned int i = 1; i < size; i++) {
 
-    // Set the minimum element to be sorted.
+    // Find the minimum element in the array after the current element.
     int min_element = i;
-
-    // Loop over the elements after the current element, and find the minimum element.
     for (unsigned int j = i + 1; j < size; j++) {
       if (array[j] < array[min_element]) {
         min_element = j;
       }
     }
 
-    // Swap the current element with the minimum element.
-    int temp = array[i];
-    array[i] = array[min_element];
-    array[min_element] = temp;
+    // If the current element is not the minimum element, swap them.
+    if (array[i] != array[min_element]) {
+      int temp = array[i];
+      array[i] = array[min_element];
+      array[min_element] = temp;
+    }
   }
 
   // If the 'print' flag is set, print out the array after each iteration.
