@@ -85,16 +85,16 @@ void insertionSortIntegers(int *array, unsigned int size, int print)
             j = j - 1;
         }
         array[j + 1] = key;
+    }
 
-        if (print)
+    if (print)
+    {
+        printf("Sorted Array: ");
+        for (int k = 0; k < size; k++)
         {
-            printf("Iteration %d: ", i);
-            for (int k = 0; k < size; k++)
-            {
-                printf("%d ", array[k]);
-            }
-            printf("\n");
+            printf("%d ", array[k]);
         }
+        printf("\n");
     }
 }
 /** Code for Bubble Sort (from Lab -if not compiling, comment out the internals, but leave the function definition) ***/
