@@ -67,7 +67,7 @@ void selectionSortIntegers(int *array, unsigned int size, int print)
   }
 }
 /***  Code for Insertion Sort ***/
-
+  
 // =============== Sort Function ===============
 // Provided below is a sort function. I have also
 // provided a template for how to document functions
