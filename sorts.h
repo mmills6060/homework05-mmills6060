@@ -86,15 +86,7 @@ void insertionSortIntegers(int *array, unsigned int size, int print)
     // Loop over the elements before the current element, and move them up if they are greater than the current element.
     unsigned int j = i - 1;
     while (j >= 0 && array[j] > key) {
-      // If the current element is less than or equal to the element at j, then we have found the correct position for the current element.
-      if (key <= array[j]) {
-        break;
-      }
-
-      // Move the element at j up one position.
       array[j + 1] = array[j];
-
-      // Decrement j so that we can continue the loop.
       j--;
     }
 
