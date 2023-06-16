@@ -38,6 +38,16 @@ int main(int argc, char *argv[])
     insertionSortIntegers(dataset5, 11, print);
     printf("\n");
     insertionSortIntegers(dataset6, 11, print);
+    printf("\n");
+    insertionSortIntegers(dataset7, 11, print);
+    printf("\n");
+     insertionSortIntegers(dataset8, 11, print);
+    printf("\n");
+     insertionSortIntegers(dataset9, 11, print);
+    printf("\n");
+     insertionSortIntegers(dataset10, 11, print);
+    printf("\n");
+    
 
 
    return 0;
