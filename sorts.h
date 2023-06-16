@@ -84,10 +84,10 @@ void insertionSortIntegers(int *array, unsigned int size, int print)
     int key = array[i];
 
     // Loop over the elements before the current element, and move them up if they are greater than the current element.
-    unsigned int j = i - 1;
-    while (j >= 0 && array[j] > key) {
+    size_t j = i - 1;
+    while (j < size && array[j] > key) {
       array[j + 1] = array[j];
-      j--;
+      j++;
     }
 
     // Finally, insert the current element into the correct position.
@@ -95,7 +95,7 @@ void insertionSortIntegers(int *array, unsigned int size, int print)
 
     // If the 'print' flag is set, print out the array after each iteration.
     if (print) {
-      for (unsigned int k = 0; k < size; k++) {
+      for (size_t k = 0; k < size; k++) {
         printf("%d ", array[k]);
       }
       printf("\n");
