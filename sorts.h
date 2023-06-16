@@ -40,13 +40,13 @@ int findMinimum(int *array, int start, int stop)
 void selectionSortIntegers(int *array, unsigned int size, int print)
 {
   // Loop over each element in the array, starting from the second element.
-  for (unsigned int i = 1; i < size; i++) {
+  for (unsigned int i = 0; i < size - 1; i++) {
 
     // Set the minimum element to be sorted.
     int min_element = i;
 
-    // Loop over the elements before the current element, and find the minimum element.
-    for (unsigned int j = i - 1; j >= 0; j--) {
+    // Loop over the elements after the current element, and find the minimum element.
+    for (unsigned int j = i + 1; j < size; j++) {
       if (array[j] < array[min_element]) {
         min_element = j;
       }
@@ -58,6 +58,13 @@ void selectionSortIntegers(int *array, unsigned int size, int print)
     array[min_element] = temp;
   }
 
+  // If the 'print' flag is set, print out the array after each iteration.
+  if (print) {
+    for (unsigned int k = 0; k < size; k++) {
+      printf("%d ", array[k]);
+    }
+    printf("\n");
+  }
 }
 /***  Code for Insertion Sort ***/
 
