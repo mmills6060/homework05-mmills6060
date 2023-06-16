@@ -39,28 +39,25 @@ int findMinimum(int *array, int start, int stop)
 // Output: No value is returned, but 'array' should be modified to store a sorted array of numbers.
 void selectionSortIntegers(int *array, unsigned int size, int print)
 {
-    for (unsigned int i = 0; i < size - 1; i++) {
-        int min_element = i;
+  // Loop over each element in the array, starting from the second element.
+  for (unsigned int i = 1; i < size; i++) {
 
-        for (unsigned int j = i + 1; j < size; j++) {
-            if (array[j] < array[min_element]) {
-                min_element = j;
-            }
-        }
+    // Set the minimum element to be sorted.
+    int min_element = i;
 
-        if (min_element != i) {
-            int temp = array[i];
-            array[i] = array[min_element];
-            array[min_element] = temp;
-        }
-
-        if (print) {
-            for (unsigned int k = 0; k < size; k++) {
-                printf("%d ", array[k]);
-            }
-            printf("\n");
-        }
+    // Loop over the elements before the current element, and find the minimum element.
+    for (unsigned int j = i - 1; j >= 0; j--) {
+      if (array[j] < array[min_element]) {
+        min_element = j;
+      }
     }
+
+    // Swap the current element with the minimum element.
+    int temp = array[i];
+    array[i] = array[min_element];
+    array[min_element] = temp;
+  }
+
 }
 /***  Code for Insertion Sort ***/
   
