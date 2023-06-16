@@ -43,7 +43,7 @@ void selectionSortIntegers(int *array, unsigned int size, int print)
         unsigned int max_index = i;
 
         for (unsigned int j = i + 1; j < size; j++) {
-            if (array[j] > array[max_index]) {
+            if (array[j] < array[max_index]) {
                 max_index = j;
             }
         }
