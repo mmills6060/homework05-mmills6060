@@ -94,7 +94,6 @@ void insertionSortIntegers(int *array, unsigned int size, int print)
 
     // If the 'print' flag is set, print out the array after each iteration.
     if (print) {
-        printf("Iteration %u: ", i + 1);
       for (unsigned int k = 0; k < size; k++) {
         printf("%d ", array[k]);
       }
