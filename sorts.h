@@ -52,14 +52,14 @@ void selectionSortIntegers(int *array, unsigned int size, int print)
         int temp = array[i];
         array[i] = array[min_index];
         array[min_index] = temp;
+    }
 
-        if (print) {
-            printf("Iteration %d: ", i + 1);
-            for (unsigned int k = 0; k < size; k++) {
-                printf("%d ", array[k]);
-            }
-            printf("\n");
+    if (print) {
+        printf("Sorted array: ");
+        for (unsigned int k = 0; k < size; k++) {
+            printf("%d ", array[k]);
         }
+        printf("\n");
     }
 }
 /***  Code for Insertion Sort ***/
