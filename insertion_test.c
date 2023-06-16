@@ -19,10 +19,7 @@ int main(int argc, char *argv[])
     int dataset4[] = {2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
     int dataset5[] = {100, 201, 52, 3223, 24, 55, 623, 75, 8523, -9, 150};
     int dataset6[] = {-1, 1, 2, -3, 4, 5, -6, 7, 8, -9, 10};
-    int dataset7[] = {0, 3, 2, 1, 4, 7, 6, 5, 8, 9, 10};
-    int dataset8[] = {0, 2, 3, 1, 4, 7, 6, 5, 8, 9, 10};
-    int dataset9[] = {0, 1, 2, 3, 4, 7, 6, 5, 8, 9, 10};
-    int dataset10[] = {0, 1, 2, 3, 4, 6, 7, 5, 8, 9, 10};
+
 
     int print = 1;
 
@@ -39,14 +36,7 @@ int main(int argc, char *argv[])
     printf("\n");
     insertionSortIntegers(dataset6, 11, print);
     printf("\n");
-    insertionSortIntegers(dataset7, 11, print);
-    printf("\n");
-     insertionSortIntegers(dataset8, 11, print);
-    printf("\n");
-     insertionSortIntegers(dataset9, 11, print);
-    printf("\n");
-     insertionSortIntegers(dataset10, 11, print);
-    printf("\n");
+
     
 
 
