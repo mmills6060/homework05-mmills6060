@@ -67,34 +67,16 @@ void selectionSortIntegers(int *array, unsigned int size, int print)
 // Output: No value is returned, but 'array' should be modified to store a sorted array of numbers.
 void insertionSortIntegers(int *array, unsigned int size, int print)
 {
-    if (array == NULL)
-    {
-        printf("Error: Invalid array\n");
-        return;
-    }
+    for (int i = 1; i < size; i++) {
+        int key = array[i];
+        int j = i - 1;
 
-    int i, key, j;
-    for (i = 1; i < size; i++)
-    {
-        key = array[i];
-        j = i - 1;
-
-        while (j >= 0 && array[j] > key)
-        {
+        while (j >= 0 && array[j] > key) {
             array[j + 1] = array[j];
-            j = j - 1;
+            j--;
         }
-        array[j + 1] = key;
-    }
 
-    if (print)
-    {
-        printf("Sorted Array: ");
-        for (int k = 0; k < size; k++)
-        {
-            printf("%d ", array[k]);
-        }
-        printf("\n");
+        array[j + 1] = key;
     }
 }
 /** Code for Bubble Sort (from Lab -if not compiling, comment out the internals, but leave the function definition) ***/
