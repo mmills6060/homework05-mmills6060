@@ -39,6 +39,8 @@ int findMinimum(int *array, int start, int stop)
 // Output: No value is returned, but 'array' should be modified to store a sorted array of numbers.
 void selectionSortIntegers(int *array, unsigned int size, int print)
 {
+        if (size <= 1)
+        return;
     // comment
     for (unsigned int i = 0; i < size - 1; i++) {
         unsigned int max_index = i;
@@ -77,6 +79,8 @@ void selectionSortIntegers(int *array, unsigned int size, int print)
 // Output: No value is returned, but 'array' should be modified to store a sorted array of numbers.
 void insertionSortIntegers(int *array, unsigned int size, int print)
 {
+        if (size <= 1)
+        return;
   // Loop over each element in the array, starting from the second element.
   for (unsigned int i = 1; i < size; i++) {
 
@@ -117,6 +121,8 @@ void insertionSortIntegers(int *array, unsigned int size, int print)
 //           be modified to store a sorted array of size.
 void bubbleSortIntegers(int *array, unsigned int size, int print)
 {
+        if (size <= 1)
+        return;
     unsigned int i, j;
     for (i = 0; i < size - 1; i++)
     {
@@ -150,6 +156,8 @@ void bubbleSortIntegers(int *array, unsigned int size, int print)
 // Second subarray is arr[m+1..r]
 void merge(int arr[], int temp[], int l, int m, int r)
 {
+        if (size <= 1)
+        return;
     if (arr == NULL || temp == NULL)
     {
         exit(1);
@@ -239,6 +247,8 @@ void merge(int arr[], int temp[], int l, int m, int r)
 // Output: No value is returned, but 'array' should be modified to store a sorted array of numbers.
 void merge_sort(int arr[], int temp[], int l, int r)
 {
+        if (size <= 1)
+        return;
     if (l < r)
     {
         int m = l + (r - l) / 2;
