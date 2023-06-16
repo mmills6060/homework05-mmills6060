@@ -43,22 +43,21 @@ void selectionSortIntegers(int *array, unsigned int size, int print)
         unsigned int max_index = i;
 
         for (unsigned int j = i + 1; j < size; j++) {
-            if (array[j] > array[max_index]) {
+            if (array[j] < array[max_index]) {
                 max_index = j;
             }
         }
 
-        // Swap the current element with the maximum element
+        // Swap the current element with the minimum element
         int temp = array[i];
         array[i] = array[max_index];
         array[max_index] = temp;
 
-        if (print) {
-            printf("Iteration %u: ", i + 1);
-            for (unsigned int k = 0; k < size; k++) {
-                printf("%d ", array[k]);
-            }
-            printf("\n");
+    if (print) {
+      for (unsigned int k = 0; k < size; k++) {
+        printf("%d ", array[k]);
+      }
+      printf("\n");
         }
     }
 }
