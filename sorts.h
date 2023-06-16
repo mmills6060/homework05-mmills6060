@@ -72,11 +72,30 @@ void insertionSortIntegers(int *array, unsigned int size, int print)
         printf("Error: Invalid array\n");
         return;
     }
-    else
+
+    int i, key, j;
+    for (i = 1; i < size; i++)
     {
-        printf("Success");
+        key = array[i];
+        j = i - 1;
+
+        while (j >= 0 && array[j] > key)
+        {
+            array[j + 1] = array[j];
+            j = j - 1;
+        }
+        array[j + 1] = key;
+
+        if (print)
+        {
+            printf("Iteration %d: ", i);
+            for (int k = 0; k < size; k++)
+            {
+                printf("%d ", array[k]);
+            }
+            printf("\n");
+        }
     }
-    
 }
 /** Code for Bubble Sort (from Lab -if not compiling, comment out the internals, but leave the function definition) ***/
 
