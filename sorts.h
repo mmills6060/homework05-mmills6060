@@ -83,13 +83,13 @@ void selectionSortIntegers(int *array, unsigned int size, int print)
 void insertionSortIntegers(int *array, unsigned int size, int print)
 {
   // Loop over each element in the array, starting from the second element.
-  for (int i = 1; i < size; i++) {
+  for (unsigned int i = 1; i < size; i++) {
 
     // Set the current element to be sorted.
     int key = array[i];
 
     // Loop over the elements before the current element, and move them up if they are greater than the current element.
-    int j = i - 1;
+    unsigned int j = i - 1;
     while (j >= 0 && array[j] > key) {
       array[j + 1] = array[j];
       j--;
@@ -97,9 +97,16 @@ void insertionSortIntegers(int *array, unsigned int size, int print)
 
     // Finally, insert the current element into the correct position.
     array[j + 1] = key;
+
+    // If the 'print' flag is set, print out the array after each iteration.
+    if (print) {
+      for (unsigned int k = 0; k < size; k++) {
+        printf("%d ", array[k]);
+      }
+      printf("\n");
+    }
   }
 }
-
 /** Code for Bubble Sort (from Lab -if not compiling, comment out the internals, but leave the function definition) ***/
 
 // =============== Sort Function ==============
