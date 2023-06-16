@@ -83,21 +83,14 @@ void insertionSortIntegers(int *array, unsigned int size, int print)
     // Set the current element to be sorted.
     int key = array[i];
 
-    // Check to see if the current element is already in the correct position.
-    if (key >= array[i - 1]) {
-      continue;
-    }
-
     // Loop over the elements before the current element, and move them up if they are greater than the current element.
     unsigned int j = i - 1;
     while (j >= 0 && array[j] > key) {
-      bounds_check(array, j + 1);
       array[j + 1] = array[j];
       j--;
     }
 
     // Finally, insert the current element into the correct position.
-    bounds_check(array, j + 1);
     array[j + 1] = key;
 
     // If the 'print' flag is set, print out the array after each iteration.
