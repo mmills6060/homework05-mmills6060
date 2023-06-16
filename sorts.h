@@ -50,13 +50,13 @@ void selectionSortIntegers(int *array, unsigned int size, int print)
       }
     }
 
-    // If the current element is not the minimum element, swap them.
-    if (array[i] != array[min_element]) {
+    // Swap the current element with the minimum element if they are not in the correct order.
+    if (array[i] > array[min_element]) {
       int temp = array[i];
       array[i] = array[min_element];
       array[min_element] = temp;
     }
-  }
+  
 
   // If the 'print' flag is set, print out the array after each iteration.
   if (print) {
@@ -64,6 +64,7 @@ void selectionSortIntegers(int *array, unsigned int size, int print)
       printf("%d ", array[k]);
     }
     printf("\n");
+    }
   }
 }
 /***  Code for Insertion Sort ***/
