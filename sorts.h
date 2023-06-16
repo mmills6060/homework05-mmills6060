@@ -158,42 +158,73 @@ void merge(int arr[], int temp[], int l, int m, int r)
     if (l > m || m + 1 > r)
         return;
 
-    int i = l;
-    int j = m + 1;
-    int k = 0;
+    int n1 = m - l + 1;
+    int n2 = r - m;
 
-    while (i <= m && j <= r)
+    // Check if temp is large enough
+    if (n1 + n2 > sizeof(int) * sizeof(temp[0]))
     {
-        if (arr[i] <= arr[j])
+        // temp is not large enough, so allocate a new array
+        int *new_temp = (int *)malloc(sizeof(int) * (n1 + n2));
+
+        // Copy the elements of arr into the new temp array
+        for (int i = 0; i < n1; i++)
         {
-            temp[k] = arr[i];
+            new_temp[i] = arr[l + i];
+        }
+
+        for (int j = 0; j < n2; j++)
+        {
+            new_temp[n1 + j] = arr[m + 1 + j];
+        }
+
+        // Free the old temp array
+        free(temp);
+
+        // Set temp to the new temp array
+        temp = new_temp;
+    }
+
+    // Merge the two subarrays into temp
+    int i = 0;
+    int j = 0;
+    int k = l;
+
+    while (i < n1 && j < n2)
+    {
+        if (arr[l + i] <= arr[m + 1 + j])
+        {
+            temp[k] = arr[l + i];
             i++;
         }
         else
         {
-            temp[k] = arr[j];
+            temp[k] = arr[m + 1 + j];
             j++;
         }
         k++;
     }
 
-    while (i <= m)
+    // Copy the remaining elements of arr[l + i] into temp
+    while (i < n1)
     {
-        temp[k] = arr[i];
+        temp[k] = arr[l + i];
         i++;
         k++;
     }
 
-    while (j <= r)
+    // Copy the remaining elements of arr[m + 1 + j] into temp
+    while (j < n2)
     {
-        temp[k] = arr[j];
+        temp[k] = arr[m + 1 + j];
         j++;
         k++;
     }
 
-    for (i = l, k = 0; i <= r; i++, k++)
+    // Copy the elements of temp back into arr
+    for (int i = l; i < r; i++)
     {
-        arr[i] = temp[k];
+        arr[i] = temp[i];
     }
 }
 

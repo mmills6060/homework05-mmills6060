@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
     printf("\n");
     insertionSortIntegers(dataset6, 11, print);
     printf("\n");
-    insertionSortIntegers(dataset7, 11, print);
+    insertionSortIntegers(dataset7, 0, print);
     printf("\n");
     
 
