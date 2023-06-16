@@ -84,7 +84,7 @@ void insertionSortIntegers(int *array, unsigned int size, int print)
     int key = array[i];
 
     // Loop over the elements before the current element, and move them up if they are greater than the current element.
-    unsigned int j = i - 1;
+    int j = i - 1;
     while (j >= 0 && array[j] > key) {
       array[j + 1] = array[j];
       j--;
