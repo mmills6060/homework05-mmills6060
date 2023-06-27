@@ -5,7 +5,8 @@ Name: Michael Mills
 Github Account name: mmills6060  
 
 Link to Assignment on Github: (copy and paste the link to your assignment repo here)
-Bubble Sort in C. (n.d.). OpenGenus IQ. Retrieved from https://iq.opengenus.org/bubble-sort-in-c/
+https://github.com/mmills6060/homework05-mmills6060
+
 How many hours did it take you to complete this assignment (estimate)? 
 6
 Did you collaborate with any other students/TAs/Professors? If so, tell us who and in what capacity.  
